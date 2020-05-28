@@ -17,16 +17,24 @@ WARNING: This project is under MIT licence. Check it on LICENCE page before cont
 • Open you VK group or make new.
 
 • Open "Manage"
+
 ![Manage](https://github.com/dolbilov/pictures/blob/master/manage.png)
 
+
 • Go to "API usage
+
 ![API usage](https://github.com/dolbilov/pictures/blob/master/api%20usage.png)
 
+
 • Press "Create token
+
 ![Create token](https://github.com/dolbilov/pictures/blob/master/create%20token.png)
 
+
 • Choose these 2 permisson: Allow access to community messages and Allow access to community photos
+
 ![Choose these 2](https://github.com/dolbilov/pictures/blob/master/choose%20these%202.png)
+
 
 • Follow VK instructions and confirm these actions
 
@@ -34,12 +42,18 @@ WARNING: This project is under MIT licence. Check it on LICENCE page before cont
 • Open you VK group or make new.
 
 • Open "Manage"
+
 ![Manage](https://github.com/dolbilov/pictures/blob/master/manage.png)
 
+
 • You can copy it from there:
+
 ![group ID](https://github.com/dolbilov/pictures/blob/master/group%20ID.png
 
+
 • Know enter it to config.py. You should have something like this.
+
 ![config.py](https://github.com/dolbilov/pictures/blob/master/config.py.png)
+
 
 TO BE CONTINUED!
