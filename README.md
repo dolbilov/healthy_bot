@@ -38,6 +38,8 @@ WARNING: This project is under MIT licence. Check it on LICENCE page before cont
 
 • Follow VK instructions and confirm these actions
 
+---
+
 ### How to know your VK group ID
 • Open you VK group or make new.
 
@@ -48,7 +50,7 @@ WARNING: This project is under MIT licence. Check it on LICENCE page before cont
 
 • You can copy it from there:
 
-![group ID](https://github.com/dolbilov/pictures/blob/master/group%20ID.png
+![group ID](https://github.com/dolbilov/pictures/blob/master/group%20ID.png)
 
 
 • Know enter it to config.py. You should have something like this.
