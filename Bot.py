@@ -1,7 +1,10 @@
 import vk_api
 from vk_api.utils import get_random_id
+from vk_api.bot_longpoll import VkBotLongPoll, VkBotEventType
 from vk_api.keyboard import VkKeyboard, VkKeyboardColor
-from random import choice
+from time import sleep
+from random import randint, choice
+from datetime import datetime
 from config import *
 
 
@@ -89,6 +92,8 @@ class Bot:
         for conv in conversations['items']:
             subject_id = str(conv['conversation']['peer']['id'])
             txt = conv['last_message']['text'].lower()
+            if txt == 'Можно еще фото собачки?':
+                self.send_msg('Эта функция пока недоступна. Скоро все будет...', subject_id, None)
             if 'сяп' in txt or 'пасиб' in txt:
                 self.send_msg(choice(['Всегда пожалуйста!', 'Рад стараться!', 'Вам спасибо!']), subject_id, None)
             if txt == 'начать':
@@ -117,7 +122,7 @@ class Bot:
                 else:
                     self.send_msg('Вы не подписаны на рассылку :(', subject_id, None)
             if (changed):
-                f = open('users.txt', 'w')
+                f = open('res/users.txt', 'w')
                 for u in self.ids:
                     f.write(u + '\n')
                 f.close()
@@ -136,10 +141,7 @@ class Bot:
         for person in ans:
             if (person['online']):
                 onlineIDs.append(person['id'])
-        if len(onlineIDs) == 1:
-            return str(onlineIDs[0])
-        else:
-            return onlineIDs
+        return onlineIDs
 
 
     """
@@ -147,4 +149,6 @@ class Bot:
     returns string representaion of list of online users to send query to VK
     """
     def get_online_str(self):
-        return ','.join(list(map(str, self.get_online())))
+        OID = self.get_online()
+        if len(OID) == 1: return str(OID[0])
+        else:   return ','.join(list(map(str, OID)))
